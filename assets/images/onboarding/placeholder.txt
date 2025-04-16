@@ -1,0 +1,14 @@
+The following image files are needed in this directory:
+
+1. city-skyline.png - A stylized city skyline transitioning from grayscale to vibrant colors
+2. citizen-voice.png - Illustration of diverse citizens with speech bubbles forming a city landmark
+3. character-evolution.png - Animation of character evolving through stages as it runs
+4. game-mechanics.png - Split-screen showing character running and a survey question
+
+These images should be created by a designer with the following specifications:
+- Dimensions: approx. 800x600px
+- Format: PNG with transparency
+- Style: Flat, modern vector art with vibrant colors (teal, orange, green)
+
+In the ../logos directory, add:
+- un-habitat-logo.png - The official UN-Habitat logo 
