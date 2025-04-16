@@ -17,7 +17,7 @@ export default {
   ],
   ios: {
     supportsTablet: true,
-    bundleIdentifier: 'com.yourcompany.citypulse',
+    bundleIdentifier: 'com.citypulse.app',
     buildNumber: '1.0.0'
   },
   android: {
@@ -25,7 +25,7 @@ export default {
       foregroundImage: './assets/adaptive-icon.png',
       backgroundColor: '#377DFF'
     },
-    package: 'com.yourcompany.citypulse',
+    package: 'com.citypulse.app',
     versionCode: 1
   },
   web: {
@@ -33,7 +33,7 @@ export default {
   },
   extra: {
     eas: {
-      projectId: 'your-project-id-here'
+      projectId: '7f536996-1d5c-4ee8-b1e2-baecb3189198'
     }
   },
   plugins: [
