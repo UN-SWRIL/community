@@ -92,10 +92,30 @@ Before you begin, make sure you have:
 ### Common Issues
 
 1. **"Invalid UUID appId" error**
-   - Solution: Make sure your app is registered with Expo first:
+   - Solution: This is a common error when the projectId is not properly registered with Expo's servers.
+   - Steps to fix:
      ```bash
+     # 1. Create a real project on the Expo website (https://expo.dev/)
+     # 2. Get the projectId from your Expo dashboard
+     # 3. Update app.json with the valid projectId:
+     
+     # In app.json:
+     "extra": {
+       "eas": {
+         "projectId": "YOUR-REAL-PROJECT-ID-FROM-EXPO"
+       }
+     }
+     ```
+
+   - Alternative approach: Create a new project through the Expo CLI
+     ```bash 
+     # Create a new Expo project elsewhere
+     npx create-expo-app temp-project
+     cd temp-project
      npx expo login
-     npx expo project:create
+     npx eas-cli init
+     
+     # Then copy the generated projectId to your actual project
      ```
 
 2. **Build fails due to code signing**
