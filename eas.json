@@ -2,8 +2,7 @@
   "cli": {
     "version": ">= 0.52.0",
     "requireCommit": false,
-    "appVersionSource": "remote",
-    "projectId": "d234a567-e89b-12c3-d456-789abcdef012"
+    "appVersionSource": "remote"
   },
   "build": {
     "development": {
