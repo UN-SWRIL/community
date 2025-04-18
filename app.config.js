@@ -1,3 +1,5 @@
+const { withPlugins } = require('@expo/config-plugins');
+
 export default {
   name: 'City Pulse',
   slug: 'community',
@@ -29,7 +31,14 @@ export default {
     versionCode: 1
   },
   web: {
-    favicon: './assets/favicon.png'
+    bundler: 'webpack',
+    output: 'static',
+    favicon: './assets/favicon.png',
+    build: {
+      babel: {
+        include: ['@expo/vector-icons'],
+      },
+    },
   },
   extra: {
     eas: {
@@ -37,6 +46,14 @@ export default {
     }
   },
   plugins: [
+    // Only include SQLite plugin for native platforms
+    (config) => {
+      if (process.env.EXPO_PLATFORM === 'web') {
+        // Remove SQLite from plugins for web
+        config.plugins = config.plugins.filter(plugin => plugin !== 'expo-sqlite');
+      }
+      return config;
+    },
     'expo-sqlite',
     [
       'expo-location',
